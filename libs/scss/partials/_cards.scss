@@ -1,0 +1,110 @@
+/* ================================= 
+  CARDS
+==================================== */
+.services-cards {
+  background-color: #fdfdfd;
+}
+
+.cards-wrapper {
+  max-width: 100%;
+  padding: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  margin-top: 30px;
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  padding: 30px;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  h2 {
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding-bottom: 17px;
+    margin: 0 0 11px;
+    line-height: 1.1;
+    letter-spacing: .4px;
+    &::after {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      width: 28px;
+      border-top: 3px solid #000;
+    }
+  }
+  p {
+    width: 100%;
+    margin-bottom: 13px;
+    line-height: 1.375rem;
+    letter-spacing: .4px;
+    &.card-text{
+      font-size: .8125rem;
+    }
+    &.card-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 17px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+    }
+  }
+  button {
+    margin-top: auto;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    line-height: 35px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Set the colours of each card. Inverts colours on hover
+#card-one {
+  @include card-colours(#67809f);
+}
+
+#card-two {
+  @include card-colours(#4183d7);
+}
+
+#card-three {
+  @include card-colours(#2ecc71);
+}
+
+#card-four {
+  @include card-colours(#d64541);
+}
+
+#card-five {
+  @include card-colours(#926fb1);
+}
+
+#card-six {
+  @include card-colours(#f62459);
+}
+
+#card-seven {
+  @include card-colours(#926fb1);
+}

@@ -1,0 +1,185 @@
+/* ================================= 
+  HEADER
+==================================== */
+.header {
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 209px; //! SET MOBILE FIRST AND UPDATE BREAKPOINTS ONCE FINISHED
+  background-color: #fff;
+}
+
+.header-scrolling {
+  transition: transform 0.3s;
+}
+
+.header-wrapper {
+  width: 100%;
+  max-height: 168px;
+  padding: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#header-phone {
+  flex: 0 0 auto;
+  margin-left: 20px;
+  font-size: 32px;
+  color: $colour-primary;
+  // Rotate to more closely match original icon
+  transform: rotate(-45deg);
+}
+
+/* ================================= 
+  SUB-HEADER
+==================================== */
+.sub-header {
+  background-color: $colour-primary;
+}
+
+.header-services {
+  display: inline-block;
+  padding: 19px 0 18px;
+  width: 154.8px;
+  height: 99px;
+  line-height: 1;
+  letter-spacing: 0.4px;
+  p:nth-of-type(1) {
+    font-size: 1.438rem;
+    padding-bottom: 10px;
+  }
+  p:nth-of-type(2) {
+    font-size: 0.625rem;
+    padding-bottom: 1.6px;
+    text-transform: uppercase;
+  }
+}
+
+// Set the colours of the header services cards and invert on hover
+#hs1 {
+  @include hs-colours(hs1, #926fb1);
+}
+
+#hs2 {
+  @include hs-colours(hs2, #4183d7);
+}
+
+#hs3 {
+  // Rotate to more closely match original icon
+  p:nth-of-type(1) {
+    transform: rotate(-45deg);
+  }
+  @include hs-colours(hs3, #d64541);
+}
+
+#hs4 {
+  @include hs-colours(hs4, #67809f);
+}
+
+#hs5 {
+  @include hs-colours(hs5, #2ecc71);
+}
+
+#hs6 {
+  @include hs-colours(hs6, #f62459);
+}
+
+.header-services-info {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  ul {
+    width: 970px;
+    display: flex;
+    list-style-type: none;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    li {
+      font-size: 0.8em;
+      padding: 15px 0 15px 22.5px;
+      &:nth-of-type(1) {
+        padding: 15px 0 15px 17.5px;
+      }
+    }
+    // Adds a hyphen after all but the last list item
+    li:not(:last-child)::after {
+      color: #fff;
+      content: "\00a0\00a0\00a0\00a0\00a0\00a0-";
+    }
+  }
+}
+
+.header-services:hover .header-services-info {
+  visibility: visible;
+}
+
+// The vertical line between elements
+.header-services-divider::before {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  border-left: 1px solid #505050;
+  border-right: 1px solid #22242e;
+}
+
+// Set the colours of the sub-menu bars
+#hsi1 {
+  background-color: #79539a;
+}
+#hsi2 {
+  background-color: #286abd;
+}
+#hsi3 {
+  background-color: #bc2c28;
+}
+#hsi4 {
+  background-color: #526781;
+}
+#hsi5 {
+  background-color: #25a25a;
+}
+#hsi6 {
+  background-color: #de093f;
+}
+
+/* ================================= 
+  VERSIONS
+==================================== */
+// Hide all elements initially
+.header-row-1,
+.header-row-2,
+.header-row-3,
+.header-button {
+  display: none;
+}
+
+// Load and display the required items for each breakpoint header
+@mixin header-v1 {
+  @include header-row-1;
+  @include header-row-2;
+  @include header-hamburger;
+  @include header-search-big;
+}
+
+@mixin header-v2 {
+  @include header-row-1;
+  @include header-search-small;
+  @include header-hamburger;
+}
+
+@mixin header-v3 {
+  @include header-row-1;
+  @include header-row-3;
+  @include header-search-small;
+  @include header-hamburger;
+  @include header-buttons;
+}

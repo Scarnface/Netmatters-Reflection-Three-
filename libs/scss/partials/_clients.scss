@@ -1,0 +1,104 @@
+/* ================================= 
+  CLIENTS
+==================================== */
+.clients {
+  background: linear-gradient(to bottom, #E8E8E8, #fff 25%);
+}
+
+.clients-wrapper {
+  min-width: 100%;
+  max-height: 170px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.client-container {
+  display: inline-block;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  // IE wont shrink without this
+  min-width: 1px;
+  // Shrinks the container so the tooltip is centered above
+  max-width: max-content;
+}
+
+.client-img,
+.client-img-top {
+  min-width: 86.4px;
+  min-height: 45.116px;
+  padding: 50px 20px;
+}
+
+.client-container .client-img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+// Colour image on hover
+.client-container:hover .client-img-top {
+  display: inline-block;
+}
+
+// Tooltip on hover
+.client-container:hover .client-description {
+  visibility: visible;
+}
+
+.client-description {
+  background-color: $colour-primary;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  width: 260px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -130px;
+  padding: 20px;
+  font-size: .875rem;
+  letter-spacing: .4px;
+  visibility: hidden;
+  h3 {
+    color: #fff;
+    margin-bottom:  17px;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  p {
+    margin-top: 11px;
+    text-align: center;
+    font-size: .8125rem;
+    line-height: 1.375rem; 
+  }
+}
+
+// The triangle under the client description
+.triangle-down {
+  position: absolute;
+  z-index: 1;
+  bottom: -65px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -20%;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid $colour-primary;
+  transform: scale(.8, .35);
+}
+
+// The horizontal line between elements
+.info-divider {
+  width: 30px;
+  height: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3.5px solid #fff;
+}

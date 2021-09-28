@@ -1,0 +1,79 @@
+//HEADER SEARCH
+@mixin header-search {
+  .search-container {
+    display: flex;
+    flex-grow: 1;
+    input {
+      min-width: 0;
+      flex: 1;
+      padding: 15px;
+      font: inherit;
+      outline: inherit;
+      font-size: 14px;
+      line-height: 1.42857143;
+    }
+    button {
+      font-size: 1.25em;
+    }
+  }
+}
+
+// Extends template for large breakpoints small search bar
+@mixin header-search-big {
+  @include header-search;
+  .search-container {
+    input,
+    button {
+      height: 47px;
+      border: solid 2px #cecece;
+      background-color: #e5e5e5;
+    }
+    input {
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+      color: #333;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+    button {
+      border-left: none;
+      border-radius: 0 2px 2px 0;
+      // Right value to more closely match original icon position
+      padding: 5px 7px 5px 5px;
+    }
+  }
+}
+
+// Extends template for small breakpoints large search bar
+@mixin header-search-small {
+  @include header-search;
+  .search-container {
+    width: 237px;
+    max-width: 237px;
+    input,
+    button {
+      height: 56px;
+      border: solid 1px #c0c0c0;
+    }
+    input {
+      border-right: none;
+      border-radius: 2px 0 0 1px;
+      color: #333;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      &:focus {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        border: 1px solid rgba(81, 203, 238, 1);
+      }
+    }
+    button {
+      color: #fff;
+      background-color: #999aa2;
+      border-left: none;
+      border-radius: 0 3px 3px 0;
+      padding: 10px 20px;
+      font-size: 1.45em;
+      &:hover {
+        background-color: #7e808a;
+      }
+    }
+  }
+}

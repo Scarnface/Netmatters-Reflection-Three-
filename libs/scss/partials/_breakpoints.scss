@@ -1,0 +1,342 @@
+/* ================================================================== 
+  S - Small devices (phones, 768px and down)
+================================================================== */
+@media only screen and (max-width: 767px) {
+  // CONTAINER
+  .container {
+    width: 100%;
+  }
+
+  // HEADER
+  .header {
+    @include header-v1;
+  }
+
+  #search-small {
+    display: none;
+  }
+
+  // NEWS
+  .news-card:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+
+  // PARTNERS / CLIENTS
+  .partners,
+  .clients {
+    display: none;
+  }
+}
+
+/* ================================================================== 
+  M - Medium devices (landscape tablets, 768px and up)
+================================================================== */
+@media only screen and (min-width: 768px) {
+  // CONTAINER
+  .container {
+    width: 750px;
+  }
+
+  //COOKIE
+  .cookie-wrapper {
+    height: 490.95px;
+  }
+
+  .cookieChange {
+    width: 264px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .cookieClose {
+    width: 264px;
+  }
+
+  //HEADER
+  .header {
+    @include header-v2;
+  }
+
+  .header-row-1 {
+    a {
+      align-self: flex-start;
+    }
+    a:nth-of-type(2) {
+      display: none;
+    }
+  }
+
+  #search-small {
+    margin-left: auto;
+  }
+
+  #logo-img {
+    max-width: 345px;
+    margin-top: 0;
+  }
+
+  // GALERY
+  .services-gallery {
+    height: calc(100vh - 110px);
+  }
+
+  .slide {
+    height: calc(100vh - 110px);
+  }
+
+  // CARDS
+  .card {
+    &:nth-child(-n + 3) {
+      width: 750px;
+      height: 290px;
+    }
+    &:nth-child(n + 4) {
+      width: 345px;
+      height: 312px;
+    }
+  }
+
+  // NEWS
+  .news-card {
+    max-width: 345px;
+    &:nth-child(1) {
+      margin-right: 30px;
+      box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .news-card:last-of-type {
+    display: none;
+  }
+
+  .news-card-info {
+    a {
+      height: 48px;
+    }
+    p {
+      height: 66px;
+    }
+  }
+}
+
+/* ================================================================== 
+  L - Large devices (laptops/desktops, 992px and up)
+================================================================== */
+@media only screen and (min-width: 992px) {
+  // CONTAINER
+  .container {
+    width: 970px;
+  }
+
+  // MODAL MENU
+  #modal-support {
+    display: none;
+  }
+
+  .main.open {
+    left: -350px;
+  }
+
+  .menu-wrapper {
+    width: 350px;
+  }
+
+  .menu-column-1 {
+    display: none;
+  }
+
+  //HEADER
+  .header {
+    @include header-v3;
+  }
+
+  #logo-img {
+    max-width: 374.167px;
+  }
+
+  #support-button {
+    margin-left: auto;
+  }
+
+  #contact-button,
+  #support-button {
+    display: inline-block;
+  }
+
+  #search-small {
+    max-width: 64px;
+    margin-left: 0;
+    & input {
+      display: none;
+    }
+    & button {
+      border-radius: 3px;
+    }
+  }
+
+  // GALERY
+  .services-gallery {
+    height: calc(100vh - 209px);
+  }
+
+  .slide {
+    height: calc(100vh - 209px);
+    text-align: left;
+    .container {
+      justify-content: left;
+    }
+  }
+
+  .slide1 {
+    @include hero-data("/libs/img/home-3wAI.jpg", #926fb1, #7e57a0, true);
+  }
+
+  .slide2 {
+    @include hero-data("/libs/img/home-57sJ.jpg", #4183d7, #2a6ec6, true);
+  }
+
+  .slide3 {
+    @include hero-data("/libs/img/home-5yqm.jpg", #d64541, #c42e2a, true);
+  }
+
+  .slide4 {
+    @include hero-data("/libs/img/home-sqvx.jpg", #67809f, #566c88, true);
+  }
+
+  .slide5 {
+    @include hero-data("/libs/img/home-JQsO.jpg", #2ecc71, #26ab5f, true);
+  }
+
+  .slide6 {
+    @include hero-data("/libs/img/home-lQs1.jpg", #f62459, #e80a42, true);
+  }
+
+  // CARDS
+  .card {
+    &:nth-child(-n + 3) {
+      width: 293.333px;
+      height: 356px;
+    }
+    &:nth-child(n + 4) {
+      width: 455px;
+      height: 290px;
+    }
+  }
+
+  // CULTURE
+  .our-culture {
+    background-image: url("/libs/img/branded.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+  }
+
+  .our-culture-wrapper {
+    width: 100%;
+  }
+
+  // NEWS
+  .news-card {
+    max-width: 455px;
+  }
+
+  // NEWSLETTER
+  .input-wrapper-single {
+    width: calc(100% / 2 - 15px);
+    &:first-of-type {
+      margin-right: 30px;
+    }
+  }
+}
+
+/* ================================================================== 
+  XL - Extra large devices (large laptops and desktops, 1200px and up)
+================================================================== */
+@media only screen and (min-width: 1260px) {
+  // CONTAINER
+  .container {
+    width: 1200px;
+  }
+
+  //HEADER
+  .header {
+    @include header-v3;
+  }
+
+  #logo-img {
+    max-width: 370px;
+  }
+
+  #search-small {
+    width: 304px;
+    max-width: 304px;
+    & input {
+      min-width: 240px;
+      display: inline-block;
+    }
+    & button {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  .header-services {
+    width: 193px;
+  }
+
+  .header-services-info {
+    ul {
+      width: 1200px;
+      li {
+        font-size: 1rem;
+        padding: 15px 0 15px 30px;
+        &:nth-of-type(1) {
+          padding: 15px 0 15px 15px;
+        }
+      }
+      li:not(:last-child)::after {
+        color: #fff;
+        content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0-";
+      }
+    }
+  }
+
+  // CARDS
+  .card {
+    &:nth-child(-n + 3) {
+      width: 370px;
+      height: 312px;
+    }
+    &:nth-child(n + 4) {
+      width: 270px;
+      height: 312px;
+    }
+  }
+
+  // CULTURE
+  .our-culture-wrapper {
+    max-width: 600px;
+  }
+
+  // NEWS
+  .news-card {
+    max-width: 370px;
+    &:nth-child(-n + 2) {
+      margin-right: 30px;
+      box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .news-card:last-of-type {
+    display: block;
+  }
+}
+
+/* ================================================================== 
+  IE10+ - 'Special' Edition
+================================================================== */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // GALLERY
+  .slide .container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,115 @@
+//HEADER MENU BUTTONS
+@mixin header-buttons {
+  .header-button {
+    color: #fff;
+    height: 56px;
+    margin-right: 20px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 1.125rem;
+    letter-spacing: 0.4px;
+    line-height: 46px;
+    &:nth-of-type(1) {
+      min-width: 136.183px;
+      background-color: #4183d7;
+      &:hover {
+        background-color: #2a6ec6;
+      }
+      span {
+        padding-right: 8px;
+      }
+    }
+    &:nth-of-type(2) {
+      min-width: 144px;
+      background-color: #999aa2;
+      &:hover {
+        background-color: #7e808a;
+      }
+      span {
+        padding-right: 8px;
+      }
+    }
+  }
+}
+
+@mixin header-hamburger {
+  .hamburger-button {
+    flex: 0 0 63.0167px;
+    height: 56px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    padding: 0;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: $colour-primary;
+    border-color: transparent;
+    // Prevents the user being able to select the text in the button.
+    user-select: none;
+    &:hover {
+      background-color: #22242e;
+    }
+  }
+
+  #nav-icon {
+    width: 30px;
+    height: 56px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out, background-color 0s;
+    cursor: pointer;
+  }
+
+  #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 55%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 14px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  #nav-icon span:nth-child(1) {
+    top: 10px;
+  }
+
+  #nav-icon span:nth-child(2),
+  #nav-icon span:nth-child(3) {
+    top: 19.5px;
+  }
+
+  #nav-icon span:nth-child(4) {
+    top: 28px;
+  }
+
+  #nav-icon span:nth-child(5) {
+    top: 35px;
+    background-color: $colour-primary;
+  }
+
+  #nav-icon.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #nav-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  #nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  #nav-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+}

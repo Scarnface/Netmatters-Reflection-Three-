@@ -1,0 +1,69 @@
+/* ================================= 
+  VARIABLES
+==================================== */
+$colour-primary: #333645;
+
+/* ================================= 
+  IMPORTS
+==================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+@import "partials/generalMixins";
+@import "partials/headerButtonMixins";
+@import "partials/headerSearchMixins";
+@import "partials/headerMixins";
+@import "partials/menuMixins";
+@import "partials/cookie";
+@import "partials/menu";
+@import "partials/header";
+@import "partials/gallery";
+@import "partials/cards";
+@import "partials/culture";
+@import "partials/news";
+@import "partials/clients";
+@import "partials/newsletter";
+@import "partials/about";
+@import "partials/partners";
+@import "partials/breakpoints";
+
+/* ================================= 
+  BASE STYLES
+==================================== */
+* {
+  /* Include border and padding in total dimensions */
+  box-sizing: border-box;
+  /* Removes auto margins added by browsers */
+  margin: 0;
+}
+
+body,
+html {
+  /* Set the specific height for the entire document relative to the viewport */
+  height: 100%;
+  /* Set the base font styling throughout the document */
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Makes images fit their containers */
+img {
+  max-width: 100%;
+}
+
+/* Remove default styling on buttons to allow custom styling */
+button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+}
+
+/* Sets the left and right site margin based on media breakpoints */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}

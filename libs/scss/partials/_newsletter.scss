@@ -1,0 +1,140 @@
+/* ================================= 
+  NEWSLETTER
+==================================== */
+.newsletter {
+  background-color: #dddddd;
+  padding: 50px 0;
+  color: $colour-primary;
+}
+
+.newsletter-form {
+  // IE wont shrink without this
+  min-width: 1px;
+  padding-left: 45px;
+  padding-right: 45px;
+  h2 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .4px;
+    line-height: 1.1;
+  }
+  label {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    line-height: 32px;
+    span {
+      color: crimson;
+    }
+    a {
+      color: $colour-primary;
+    }
+  }
+  button {
+    color: #fff;
+    background-color: $colour-primary;
+    margin-top: 30px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    line-height: 35px;
+    &:hover {
+      background-color: #22242e;
+    }
+  }
+}
+
+// Custom checkbox styling
+
+// Checkbox container
+.checkbox-container {
+  display: block;
+  position: relative;
+  float: left;
+  padding-left: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+// Hide the browser's default checkbox
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+// Create a custom checkbox
+.checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background-color: #dddddd;
+  border-radius: 3px;
+  border: 3px solid $colour-primary;
+}
+
+// When the checkbox is checked, add corporate coloured background
+.checkbox-container input:checked ~ .checkbox-checkmark {
+  background-color: $colour-primary;
+}
+
+// Create the checkmark/indicator (hidden when not checked)
+.checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+// Show the checkmark when checked
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+  display: block;
+}
+
+// Style the checkmark/indicator
+.checkbox-container .checkbox-checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 7px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.input-wrapper-double {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // IE wont shrink without this
+  min-width: 1px;
+}
+
+.input-wrapper-single {
+  width: 100%;
+  input {
+    height: 47px;
+    width: 100%;
+    margin: 0 0 15px;
+    border: solid 1px #d3d3d3;
+    padding-left: 15px;
+    outline: inherit;
+    transition : border .15s ease-in;
+    &:focus {
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+      border: 1px solid rgba(81, 203, 238, 1);
+    }
+  }
+  label
+  {
+    margin-bottom: 5px;
+    line-height: 1.42857143;
+  }
+}
