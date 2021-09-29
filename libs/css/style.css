@@ -715,7 +715,7 @@
 }
 
 .slide1 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-3wAI.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-3wAI.jpg);
 }
 
 .slide1 button {
@@ -727,7 +727,7 @@
 }
 
 .slide2 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-57sJ.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-57sJ.jpg);
 }
 
 .slide2 button {
@@ -739,7 +739,7 @@
 }
 
 .slide3 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-5yqm.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-5yqm.jpg);
 }
 
 .slide3 button {
@@ -751,7 +751,7 @@
 }
 
 .slide4 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-sqvx.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-sqvx.jpg);
 }
 
 .slide4 button {
@@ -763,7 +763,7 @@
 }
 
 .slide5 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-JQsO.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-JQsO.jpg);
 }
 
 .slide5 button {
@@ -779,7 +779,7 @@
 }
 
 .slide6 {
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(/libs/img/home-lQs1.jpg);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.45), #000), url(../img/home-lQs1.jpg);
 }
 
 .slide6 button {
@@ -2191,7 +2191,7 @@
     justify-content: left;
   }
   .slide1 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-3wAI.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-3wAI.jpg);
   }
   .slide1 button {
     background-color: #926fb1;
@@ -2200,7 +2200,7 @@
     background-color: #7e57a0;
   }
   .slide2 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-57sJ.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-57sJ.jpg);
   }
   .slide2 button {
     background-color: #4183d7;
@@ -2209,7 +2209,7 @@
     background-color: #2a6ec6;
   }
   .slide3 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-5yqm.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-5yqm.jpg);
   }
   .slide3 button {
     background-color: #d64541;
@@ -2218,7 +2218,7 @@
     background-color: #c42e2a;
   }
   .slide4 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-sqvx.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-sqvx.jpg);
   }
   .slide4 button {
     background-color: #67809f;
@@ -2227,7 +2227,7 @@
     background-color: #566c88;
   }
   .slide5 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-JQsO.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-JQsO.jpg);
   }
   .slide5 button {
     background-color: #2ecc71;
@@ -2236,7 +2236,7 @@
     background-color: #26ab5f;
   }
   .slide6 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url(/libs/img/home-lQs1.jpg);
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/home-lQs1.jpg);
   }
   .slide6 button {
     background-color: #f62459;
@@ -2253,7 +2253,7 @@
     height: 290px;
   }
   .our-culture {
-    background-image: url("/libs/img/branded.png");
+    background-image: url("../img/branded.png");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right;

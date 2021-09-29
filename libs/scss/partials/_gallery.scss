@@ -57,30 +57,30 @@
 }
 
 .slide1 {
-  @include hero-data("/libs/img/home-3wAI.jpg", #926fb1, #7e57a0, false);
+  @include hero-data("../img/home-3wAI.jpg", #926fb1, #7e57a0, false);
 }
 
 .slide2 {
-  @include hero-data("/libs/img/home-57sJ.jpg", #4183d7, #2a6ec6, false);
+  @include hero-data("../img/home-57sJ.jpg", #4183d7, #2a6ec6, false);
 }
 
 .slide3 {
-  @include hero-data("/libs/img/home-5yqm.jpg", #d64541, #c42e2a, false);
+  @include hero-data("../img/home-5yqm.jpg", #d64541, #c42e2a, false);
 }
 
 .slide4 {
-  @include hero-data("/libs/img/home-sqvx.jpg", #67809f, #566c88, false);
+  @include hero-data("../img/home-sqvx.jpg", #67809f, #566c88, false);
 }
 
 .slide5 {
-  @include hero-data("/libs/img/home-JQsO.jpg", #2ecc71, #26ab5f, false);
+  @include hero-data("../img/home-JQsO.jpg", #2ecc71, #26ab5f, false);
   button {
     width: 345.183px;
   }
 }
 
 .slide6 {
-  @include hero-data("/libs/img/home-lQs1.jpg", #f62459, #e80a42, false);
+  @include hero-data("../img/home-lQs1.jpg", #f62459, #e80a42, false);
 }
 
 // SLICK
