@@ -1,0 +1,112 @@
+/* ================================= 
+  OFFICES
+==================================== */
+
+.our-offices {
+  margin-top: -40px;
+}
+
+.offices-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 24px 15px;
+  width: 100%;
+  height: 87.6px;
+  background-color: $colour-primary;
+  color: #fff;
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.office-card-container {
+  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
+}
+
+.office-card-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 15px 50px;
+}
+
+.office-card {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  width: 100%;
+  background-color: #fff;
+}
+
+.office-image-container {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.office-card-info {
+  padding: 30px 30px 0;
+  border: solid 1px #d3d3d3;
+  border-top: none;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.4px;
+    color: #666;
+  }
+  button {
+    margin-bottom: 30px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    line-height: 35px;
+    color: #fff;
+    background-color: #926fb1;
+    &:hover {
+      background-color: #79539a;
+    }
+  }
+  footer {
+    display: flex;
+    img {
+      width: 47px;
+      height: 47px;
+    }
+    p {
+      padding-left: 20px;
+    }
+  }
+}
+
+.office-name {
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+}
+
+.office-tel {
+  margin: 15px 0;
+  color: #926fb1;
+  font-size: 1.625rem;
+  font-weight: 600;
+}

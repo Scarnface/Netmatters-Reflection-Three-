@@ -140,7 +140,7 @@
 
 <!-- ================================= 
         CULTURE
-      ================================== -->
+================================== -->
 <section class="our-culture">
   <div class="container">
     <div class="our-culture-wrapper">
@@ -166,7 +166,7 @@
 
 <!-- ================================= 
         NEWS
-      ================================== -->
+================================== -->
 <section class="latest-news">
   <div class="container">
     <header class="news-title-wrapper">
@@ -236,7 +236,7 @@
 
 <!-- ================================= 
         CLIENTS
-      ================================== -->
+================================== -->
 <section class="clients">
   <div class="container">
     <div class="clients-wrapper">

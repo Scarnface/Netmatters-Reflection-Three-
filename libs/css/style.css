@@ -1633,6 +1633,129 @@
   display: inline-block;
 }
 
+/* ================================= 
+  OFFICES
+==================================== */
+.our-offices {
+  margin-top: -40px;
+}
+
+.offices-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 24px 15px;
+  width: 100%;
+  height: 87.6px;
+  background-color: #333645;
+  color: #fff;
+}
+
+.offices-title-wrapper h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+
+.office-card-container {
+  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
+}
+
+.office-card-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 15px 50px;
+}
+
+.office-card {
+  width: 100%;
+  background-color: #fff;
+}
+
+.office-card:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.office-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.office-image-container img {
+  width: 100%;
+  display: block;
+}
+
+.office-card-info {
+  padding: 30px 30px 0;
+  border: solid 1px #d3d3d3;
+  border-top: none;
+}
+
+.office-card-info a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.office-card-info a:hover {
+  text-decoration: underline;
+}
+
+.office-card-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.4px;
+  color: #666;
+}
+
+.office-card-info button {
+  margin-bottom: 30px;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  line-height: 35px;
+  color: #fff;
+  background-color: #926fb1;
+}
+
+.office-card-info button:hover {
+  background-color: #79539a;
+}
+
+.office-card-info footer {
+  display: flex;
+}
+
+.office-card-info footer img {
+  width: 47px;
+  height: 47px;
+}
+
+.office-card-info footer p {
+  padding-left: 20px;
+}
+
+.office-name {
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+}
+
+.office-tel {
+  margin: 15px 0;
+  color: #926fb1;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
 /* ================================================================== 
   S - Small devices (phones, 768px and down)
 ================================================================== */
