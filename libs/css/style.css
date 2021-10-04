@@ -1636,8 +1636,33 @@
 /* ================================= 
   OFFICES
 ==================================== */
+.offices-breadcrumb {
+  display: none;
+}
+
+.breadcrumb-wrapper {
+  margin: 0 15px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.4px;
+}
+
+.breadcrumb-wrapper a {
+  color: #333645;
+  text-decoration: none;
+}
+
+.breadcrumb-wrapper a:nth-of-type(1) {
+  font-weight: 700;
+}
+
 .our-offices {
   margin-top: -40px;
+}
+
+.offices-container {
+  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
 }
 
 .offices-title-wrapper {
@@ -1662,7 +1687,7 @@
 }
 
 .office-card-wrapper {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1754,6 +1779,111 @@
   color: #926fb1;
   font-size: 1.625rem;
   font-weight: 600;
+}
+
+.contact-info {
+  padding: 0 15px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: #333645;
+  line-height: 1.875rem;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.contact-info ul li {
+  margin: 0 0 25px;
+}
+
+.contact-info ul a {
+  text-decoration: none;
+  color: #926fb1;
+  font-size: 1.625rem;
+  line-height: 1.1;
+}
+
+.contact-info ul a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin-bottom: 50px;
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+.contact-form {
+  min-width: 1px;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #dddddd;
+}
+
+.contact-form h2 {
+  margin: 0 0 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
+}
+
+.contact-form label {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 32px;
+}
+
+.contact-form label span {
+  color: crimson;
+}
+
+.contact-form label a {
+  color: #333645;
+}
+
+.contact-form button {
+  color: #fff;
+  background-color: #926fb1;
+  margin-top: 30px;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  line-height: 35px;
+}
+
+.contact-form button:hover {
+  background-color: #79539a;
+}
+
+.input-wrapper-single input,
+.input-wrapper-single textarea {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.42857143;
+  letter-spacing: 0.4px;
+}
+
+.input-wrapper-single textarea {
+  height: 100px;
+  width: 100%;
+  margin: 0 0 15px;
+  border: solid 1px #d3d3d3;
+  padding: 5px 15px;
+  outline: inherit;
+  transition: border 0.15s ease-in;
+}
+
+.input-wrapper-single textarea:focus {
+  box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
 }
 
 /* ================================================================== 
@@ -2392,6 +2522,32 @@
   }
   .input-wrapper-single:first-of-type {
     margin-right: 30px;
+  }
+  .offices-breadcrumb {
+    display: inline;
+  }
+  .our-offices {
+    margin-top: 0;
+  }
+  .offices-title-wrapper {
+    height: 117.6px;
+    background-color: #e8e8e8;
+    color: #333645;
+  }
+  .offices-title-wrapper h1 {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+  .office-card-wrapper {
+    padding-top: 0;
+  }
+  .office-card {
+    margin-bottom: 30px;
+    width: 291.733px;
+    box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
+  }
+  #wrapper-message {
+    width: 100%;
   }
 }
 

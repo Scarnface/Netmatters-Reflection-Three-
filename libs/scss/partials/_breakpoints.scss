@@ -247,6 +247,39 @@
       margin-right: 30px;
     }
   }
+
+  // CONTACT PAGE
+  .offices-breadcrumb {
+    display: inline;
+  }
+
+  .our-offices {
+    margin-top: 0;
+  }
+
+  .offices-title-wrapper {
+    height: 117.6px;
+    background-color: #e8e8e8;
+    color: $colour-primary;
+    h1 {
+      margin-top: 50px;
+      padding: 0 10px;
+    }
+  }
+
+  .office-card-wrapper {
+    padding-top: 0;
+  }
+
+  .office-card {
+    margin-bottom: 30px;
+    width: 291.733px;
+    box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
+  }
+
+  #wrapper-message {
+    width: 100%;
+  }
 }
 
 /* ================================================================== 

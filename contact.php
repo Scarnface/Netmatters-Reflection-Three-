@@ -4,6 +4,15 @@
 <!-- ================================= 
         OFFICES
 ================================== -->
+<nav class=offices-breadcrumb>
+  <div class="container">
+    <div class="breadcrumb-wrapper">
+      <a id="bc-home" href="#">Home</a>
+      <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+      <a id="bc-contact" href="#">Our Offices</a>
+    </div>
+  </div>
+</nav>
 <section class="our-offices">
   <header class="offices-title-wrapper">
     <div class="container">
@@ -76,12 +85,68 @@
             <img src="libs/img/gorlestonmap.jpg" alt="Great Yarmouth Map" />
           </footer>
         </article>
-      </div>
-
-
-      
+      </div> 
     </div>
   </section>
+
+  <section class="offices-contact">
+    <div class="container">
+      <div class="contact-info">
+        <ul>
+          <li>Email us on:</li>
+          <li><a href="mailto:#">sales@netmatters.com</a></li>
+          <li>Business hours:</li>
+          <li>Monday - Friday 07:00 - 18:00</li>
+          <li id="ITSupport">Out of Hours IT Support <i class="fas fa-chevron-down"></i></li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <form class="contact-form">
+
+          <div class="input-wrapper-double">
+            <div class="input-wrapper-single">
+              <label for="contact-name" class="required">Your Name <span>*</span></label><br />
+              <input id="contact-name" name="name" type="text" value="" /><br />
+            </div>
+            <div class="input-wrapper-single">
+              <label for="contact-email" class="required">Your Email <span>*</span></label
+              ><br />
+              <input id="contact-email" name="email" type="text" value="" />
+            </div>
+          </div>
+
+          <div class="input-wrapper-double">
+            <div class="input-wrapper-single">
+              <label for="contact-tel" class="required">Your Telephone Number <span>*</span></label><br />
+              <input id="contact-tel" name="name" type="text" value="" /><br />
+            </div>
+            <div class="input-wrapper-single">
+              <label for="contact-subject" class="required">Subject <span>*</span></label
+              ><br />
+              <input id="contact-subject" name="email" type="text" value="" />
+            </div>
+          </div>
+
+          <div class="input-wrapper-single" id="wrapper-message">
+            <label for="contact-message" class="required">Message <span>*</span></label><br />
+            <textarea id="contact-message" name="name" value=""></textarea><br />
+          </div>
+
+          <label class="checkbox-container">
+            <input id="checkbox" type="checkbox" name="marketing_preference" />
+            <span class="checkbox-checkmark"></span>
+            Please tick this box if you wish to receive marketing information from us. Please see our
+            <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
+          </label>
+          <button>Send Enquiry</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
 </section>
 
 <?php include "./libs/inc/newsletter.php" ?>
