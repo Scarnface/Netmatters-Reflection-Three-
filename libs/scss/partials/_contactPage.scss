@@ -21,11 +21,11 @@
 }
 
 .our-offices {
-  margin-top: -40px;
+  background: linear-gradient(to bottom, #e8e8e8, #fff 40%);
 }
 
 .offices-container {
-  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
+  background: linear-gradient(to bottom, #e8e8e8, #fff 40%);
 }
 
 .offices-title-wrapper {
@@ -42,10 +42,6 @@
     line-height: 24px;
     letter-spacing: 0.4px;
   }
-}
-
-.office-card-container {
-  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
 }
 
 .office-card-wrapper {
@@ -116,6 +112,10 @@
       padding-left: 20px;
     }
   }
+}
+
+.map-wide {
+  display: none;
 }
 
 .office-name {

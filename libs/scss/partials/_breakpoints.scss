@@ -29,6 +29,20 @@
 }
 
 /* ================================================================== 
+  MAP - Small devices (Anything not mobile handset - For placeholder map images only)
+================================================================== */
+@media only screen and (min-width: 490px) {
+  //CONTACT PAGE
+  .map-small {
+    display: none;
+  }
+
+  .map-wide {
+    display: inline;
+  }
+}
+
+/* ================================================================== 
   M - Medium devices (landscape tablets, 768px and up)
 ================================================================== */
 @media only screen and (min-width: 768px) {
@@ -253,10 +267,6 @@
     display: inline;
   }
 
-  .our-offices {
-    margin-top: 0;
-  }
-
   .offices-title-wrapper {
     height: 117.6px;
     background-color: #e8e8e8;
@@ -275,6 +285,15 @@
     margin-bottom: 30px;
     width: 291.733px;
     box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
+  }
+
+  //CONTACT PAGE
+  .map-small {
+    display: inline;
+  }
+
+  .map-wide {
+    display: none;
   }
 
   #wrapper-message {
@@ -361,6 +380,19 @@
 
   .news-card:last-of-type {
     display: block;
+  }
+
+  //CONTACT PAGE
+  .office-card {
+    width: 368.4px;
+  }
+
+  .contact-form {
+    width: 770px;
+  }
+
+  .contact-info {
+    order: 2;
   }
 }
 

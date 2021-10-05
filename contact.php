@@ -40,7 +40,8 @@
             <button>VIEW MORE</button>
           </section>
           <footer class="map-image-container">
-            <img src="libs/img/cambridgemap.jpg" alt="Cambridge Map" />
+            <img class="map-small" src="libs/img/cambridgemap.jpg" alt="Cambridge Map" />
+            <img class="map-wide" src="libs/img/cambridgemap-wide.jpg" alt="Cambridge Map" />
           </footer>
         </article>
 
@@ -61,7 +62,8 @@
             <button>VIEW MORE</button>
           </section>
           <footer class="map-image-container">
-            <img src="libs/img/wymondhammap.jpg" alt="Wymondham Map" />
+            <img class="map-small" src="libs/img/wymondhammap.jpg" alt="Wymondham Map" />
+            <img class="map-wide" src="libs/img/wymondhammap-wide.jpg" alt="Wymondham Map" />
           </footer>
         </article>
 
@@ -82,7 +84,8 @@
             <button>VIEW MORE</button>
           </section>
           <footer class="map-image-container">
-            <img src="libs/img/gorlestonmap.jpg" alt="Great Yarmouth Map" />
+            <img class="map-small" src="libs/img/gorlestonmap.jpg" alt="Great Yarmouth Map" />
+            <img class="map-wide" src="libs/img/gorlestonmap-wide.jpg" alt="Great Yarmouth Map" />
           </footer>
         </article>
       </div> 

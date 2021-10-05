@@ -1659,10 +1659,11 @@
 
 .our-offices {
   margin-top: -40px;
+  background: linear-gradient(to bottom, #e8e8e8, #fff 40%);
 }
 
 .offices-container {
-  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
+  background: linear-gradient(to bottom, #e8e8e8, #fff 40%);
 }
 
 .offices-title-wrapper {
@@ -1680,10 +1681,6 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.4px;
-}
-
-.office-card-container {
-  background: linear-gradient(to bottom, #e8e8e8, #fff 4%);
 }
 
 .office-card-wrapper {
@@ -1764,6 +1761,10 @@
 
 .office-card-info footer p {
   padding-left: 20px;
+}
+
+.map-wide {
+  display: none;
 }
 
 .office-name {
@@ -2024,6 +2025,18 @@
   .partners,
   .clients {
     display: none;
+  }
+}
+
+/* ================================================================== 
+  MAP - Small devices (Anything not mobile handset - For placeholder map images only)
+================================================================== */
+@media only screen and (min-width: 490px) {
+  .map-small {
+    display: none;
+  }
+  .map-wide {
+    display: inline;
   }
 }
 
@@ -2546,6 +2559,12 @@
     width: 291.733px;
     box-shadow: 50px 20px 20px -20px rgba(0, 0, 0, 0.05);
   }
+  .map-small {
+    display: inline;
+  }
+  .map-wide {
+    display: none;
+  }
   #wrapper-message {
     width: 100%;
   }
@@ -2785,6 +2804,15 @@
   }
   .news-card:last-of-type {
     display: block;
+  }
+  .office-card {
+    width: 368.4px;
+  }
+  .contact-form {
+    width: 770px;
+  }
+  .contact-info {
+    order: 2;
   }
 }
 
