@@ -1658,7 +1658,6 @@
 }
 
 .our-offices {
-  margin-top: -40px;
   background: linear-gradient(to bottom, #e8e8e8, #fff 40%);
 }
 
@@ -2538,9 +2537,6 @@
   }
   .offices-breadcrumb {
     display: inline;
-  }
-  .our-offices {
-    margin-top: 0;
   }
   .offices-title-wrapper {
     height: 117.6px;

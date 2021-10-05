@@ -9,7 +9,7 @@
     <div class="breadcrumb-wrapper">
       <a id="bc-home" href="#">Home</a>
       <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-      <a id="bc-contact" href="#">Our Offices</a>
+      <span id="bc-contact">Our Offices</span>
     </div>
   </div>
 </nav>
