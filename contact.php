@@ -8,6 +8,7 @@
   $error_tel = "";
   $error_subject = "";
   $error_message = "";
+  $success = "";
 
   try {
     $pdo = new PDO("mysql:host=$servername;dbname=nmdb", $username, $password);
@@ -45,6 +46,7 @@
       // Performing insert query execution
       $sql = "INSERT INTO contact (name, email, telephone, subject, message, subscribe) VALUES (?,?,?,?,?,?)";
       $pdo->prepare($sql)->execute([$name, $email, $telephone, $subject, $message, $subscribe]);
+      $success =  "<span class='success'>&nbsp;&nbsp;&nbsp;Enquiry Sent!</span>";
     }
   }
 ?>
@@ -155,9 +157,8 @@
         </ul>
       </div>
 
-      <div class="contact">
+      <div class="contact"> 
         <form class="contact-form" action="contact.php" method="post">
-
           <div class="input-wrapper-double">
             <div class="input-wrapper-single">
               <label for="contact-name" class="required">Your Name <span>*</span></label><br />
@@ -192,7 +193,7 @@
             Please tick this box if you wish to receive marketing information from us. Please see our
             <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
           </label>
-          <button type="submit" name="submit" value="Submit">Send Enquiry</button>
+          <button type="submit" name="submit" value="Submit">Send Enquiry</button><?php echo $success; ?>
 
         </form>
       </div>
