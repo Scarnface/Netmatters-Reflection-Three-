@@ -3,13 +3,49 @@
   $username = "root";
   $password = "";
 
+  $error_name = "";
+  $error_email = "";
+  $error_tel = "";
+  $error_subject = "";
+  $error_message = "";
+
   try {
-    $conn = new PDO("mysql:host=$servername;dbname=nmdb", $username, $password);
+    $pdo = new PDO("mysql:host=$servername;dbname=nmdb", $username, $password);
     // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
   } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
+  }
+
+  // Taking all values from the form data(input)
+  if (isset($_POST['submit'])) {
+    $name =  filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $telephone = filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_NUMBER_INT);
+    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    $subscribe = filter_input(INPUT_POST, 'subscribe', FILTER_SANITIZE_NUMBER_INT);
+
+    if($name =="") {
+      $error_name = "<span class='error'>Please enter your name.</span>";
+    } elseif($email == "") {
+      $error_email=  "<span class='error'>Please enter your email.</span>"; 
+    } elseif(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) {
+      $error_email= "<span class='error'>Please enter a valid email.</span>";
+    } elseif($telephone == "") {
+      $error_tel =  "<span class='error'>Please enter a phone number.</span>";
+    } elseif(is_numeric($telephone) == false) {
+      $error_tel =  "<span class='error'>Please enter a numeric value.</span>";
+    } elseif($subject == "") {
+      $error_tel =  "<span class='error'>Please enter a subject.</span>";
+    } elseif($message == "") {
+      $error_tel =  "<span class='error'>Please enter a message.</span>";
+    } else {
+      // Performing insert query execution
+      $sql = "INSERT INTO contact (name, email, telephone, subject, message, subscribe) VALUES (?,?,?,?,?,?)";
+      $pdo->prepare($sql)->execute([$name, $email, $telephone, $subject, $message, $subscribe]);
+    }
   }
 ?>
 
@@ -120,44 +156,43 @@
       </div>
 
       <div class="contact">
-        <form class="contact-form">
+        <form class="contact-form" action="contact.php" method="post">
 
           <div class="input-wrapper-double">
             <div class="input-wrapper-single">
               <label for="contact-name" class="required">Your Name <span>*</span></label><br />
-              <input id="contact-name" name="name" type="text" value="" /><br />
+              <input id="contact-name" name="name" type="text" value="" /><?php echo $error_name; ?><br />
             </div>
             <div class="input-wrapper-single">
               <label for="contact-email" class="required">Your Email <span>*</span></label
               ><br />
-              <input id="contact-email" name="email" type="text" value="" />
+              <input id="contact-email" name="email" type="text" value="" /><?php echo $error_email; ?>
             </div>
           </div>
 
           <div class="input-wrapper-double">
             <div class="input-wrapper-single">
               <label for="contact-tel" class="required">Your Telephone Number <span>*</span></label><br />
-              <input id="contact-tel" name="name" type="text" value="" /><br />
+              <input id="contact-tel" name="telephone" type="text" value="" /><?php echo $error_tel; ?><br />
             </div>
             <div class="input-wrapper-single">
-              <label for="contact-subject" class="required">Subject <span>*</span></label
-              ><br />
-              <input id="contact-subject" name="email" type="text" value="" />
+              <label for="contact-subject" class="required">Subject <span>*</span></label><br />
+              <input id="contact-subject" name="subject" type="text" value="" /><?php echo $error_subject; ?>
             </div>
           </div>
 
           <div class="input-wrapper-single" id="wrapper-message">
             <label for="contact-message" class="required">Message <span>*</span></label><br />
-            <textarea id="contact-message" name="name" value=""></textarea><br />
+            <textarea id="contact-message" name="message" value="" ></textarea><br /><?php echo $error_message; ?>
           </div>
 
           <label class="checkbox-container">
-            <input id="checkbox" type="checkbox" name="marketing_preference" />
+            <input id="checkbox" type="checkbox" name="subscribe" value="1"/>
             <span class="checkbox-checkmark"></span>
             Please tick this box if you wish to receive marketing information from us. Please see our
             <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
           </label>
-          <button>Send Enquiry</button>
+          <button type="submit" name="submit" value="Submit">Send Enquiry</button>
 
         </form>
       </div>
